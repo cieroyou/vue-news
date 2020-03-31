@@ -1,15 +1,16 @@
 <template>
   <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    hello
+    <tool-bar></tool-bar>
+    <router-view></router-view>
   </div>
 </template>
 
 <script>
-
+import ToolBar from './components/ToolBar'
 export default {
   name: 'App',
   components: {
+    ToolBar
   },
   methods:{
     fetchData(){
