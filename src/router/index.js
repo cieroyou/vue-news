@@ -10,15 +10,15 @@ export const router = new VueRouter({
     routes:[
         {
             path: '/ask',
-            components: AskView
+            component: AskView
         },
         {
             path: '/jobs',
-            components: JobsView
+            component: JobsView
         },
         {
-            path: 'news',
-            components: NewsView
+            path: '/news',
+            component: NewsView
         },
     ]
 })
