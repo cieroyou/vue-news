@@ -15,13 +15,8 @@ export default {
   created(){
     var vm = this;
     fetchAskList()
-    .then(function(response){
-      vm.ask = response.data;
-      console.log(vm.ask);
-    })
-    .catch(function(error){
-      console.log(error);
-    })
+        .then(response => this.ask = response.data)
+        .catch(error => console.log(error))
   }
 }
 </script>
