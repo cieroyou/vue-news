@@ -1,10 +1,11 @@
 <template>
   <div>
-    <div v-for="item in this.$store.state.jobs">{{ item.title }}</div>
+    <div v-for="item in fetchedJobs">{{ item.title }}</div>
   </div>
 </template>
 
 <script>
+import { mapGetters } from 'vuex';
 export default {
  data(){
         return{
@@ -12,7 +13,12 @@ export default {
     },
     created(){
       this.$store.dispatch('FETCH_JOBS');
-    }
+    },
+    computed: {
+        ...mapGetters([
+            'fetchedJobs'
+        ])
+    },
 
 }    
 
