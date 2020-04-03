@@ -15,6 +15,9 @@ export default {
         return{
         }
     },
+    created(){
+      this.$store.dispatch('FETCH_JOBS');
+    },
     computed: {
         ...mapGetters([
             'fetchedJobs'

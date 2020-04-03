@@ -16,4 +16,10 @@ function fetchUserInfo(username){
     return axios.get(`${config.baseUrl}user/${username}.json`);
 
 }
-export { fetchNewsList, fetchJobsList, fetchAskList, fetchUserInfo };
+
+function fetchItemInfo(itemid){
+    return axios.get(`${config.baseUrl}item/${itemid}.json`);
+
+}
+
+export { fetchNewsList, fetchJobsList, fetchAskList, fetchUserInfo, fetchItemInfo };
