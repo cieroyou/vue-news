@@ -1,6 +1,10 @@
 <template>
   <div>
-    <div v-for="item in fetchedJobs">{{ item.title }}</div>
+    <div v-for="item in fetchedJobs">
+      <a :href="item.url"> {{ item.title }}</a>
+      <small>{{ item.domain }}</small>
+
+    </div>
   </div>
 </template>
 
