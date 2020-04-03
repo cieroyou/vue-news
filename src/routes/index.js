@@ -24,7 +24,7 @@ export const router = new VueRouter({
             component: NewsView
         },
         {
-            path: '/user',
+            path: '/user/:id',
             component: UserView
         },
         {
