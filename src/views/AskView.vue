@@ -47,7 +47,7 @@ export default {
 
 
 
-<style>
+<style scoped>
 .item-list{
     margin: 0;
     padding: 0;
