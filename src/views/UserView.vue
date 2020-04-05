@@ -3,7 +3,7 @@
     <!-- <p>name: {{ userInfo.id }}</p>
     <p>karma: {{ userInfo.karma }}</p>
     <p>created: {{ userInfo.created }}</p> -->
-    <user-profile></user-profile>
+    <user-profile :info = 'userInfo'></user-profile>
   </div>
 </template>
 
@@ -12,6 +12,11 @@ import UserProfile from '../components/UserProfile'
 export default {
   components: {
     UserProfile
+  },
+  computed: {
+    userInfo(){
+      return this.$store.state.user
+    }
   },
   created(){
     const username = this.$route.params.id;
