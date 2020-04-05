@@ -1,8 +1,6 @@
 import VueRouter from 'vue-router';
 import Vue from 'vue';
-import AskView from '../views/AskView'
-import JobsView from '../views/JobsView'
-import NewsView from '../views/NewsView'
+
 import UserView from '../views/UserView'
 import ItemView from '../views/ItemView'
 

@@ -61,18 +61,8 @@ export default {
     //    this.$store.dispatch(actionName);
     },
     computed: {
-        // 페이지별로 create()에서 호출하는 api가 다르므로 각기 다른 결과(list)값을 가져옴
         listItems() {
-            const routeName = this.$route.name;
-            let value;
-            if (routeName === 'news'){
-                 value = this.$store.state.news;
-            }else if (routeName === 'ask'){
-                value = this.$store.state.ask;
-            }else if (routeName === 'jobs'){
-                value = this.$store.state.jobs;
-            }
-            return value;
+            return this.$store.state.list;
         }
     }
 

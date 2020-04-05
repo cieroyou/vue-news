@@ -51,3 +51,30 @@ export default new Vue();
 import bus from './bus.js';
 
 ```
+
+### HOC
+NewsView, AskView, JobsView 에 공통되는 컴포넌트 로직을 HOC를 사용하여 코드 재사용
++ 공통되는 component logic   
+  데이터를 fetch하고 받은 데이터를 뿌려준다는 것이 동일 함   
+  ```javascript 
+   // 공통되는 로직 코드
+   components : {
+      ListItem
+   },
+   created() {
+      bus.$emit('start:spinner')
+      setTimeout(()=>{
+         this.$store.dispatch('FETCH_NEWS')
+         .then(() => {
+            console.log('fetchedNewsData');
+            bus.$emit('end:spinner')
+         })
+         .catch((error)=> console.log(error));
+      },3000)
+   }
+  ```
+1. view/CreateListView.js 에 공통되는 로직 코드 정의
+2. 라우터에서 정의된 NewsView, AskView, JobsView 컴포넌트를 CreateListView 로 변
+3. HOC 로 생산된 중간컴포넌트 view/ListView.vue 생성
+   + ListView.vue 에 components/ListItem.vue 를 컴포넌트로 추가
+4. view/CreateListView의 render 정의
