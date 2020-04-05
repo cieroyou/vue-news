@@ -2,7 +2,11 @@
   <div>
     <section>
       <!-- 질문 상세 정보 -->
-      <div class="user-container">
+      <user-profile>
+        <div slot="username">{{ itemInfo.user }}</div>
+        <template slot="time">{{ itemInfo.time_ago }}</template>
+      </user-profile>
+      <!-- <div class="user-container">
         <div>
           <i class="fas fa-user"></i>
         </div>
@@ -14,7 +18,7 @@
            {{ itemInfo.time_ago }}
           </div>
         </div>
-      </div>
+      </div> -->
       <h2>{{ itemInfo.title}}</h2>
     </section>
     <section>
@@ -24,7 +28,11 @@
 </template>
 
 <script>
+import UserProfile from '../components/UserProfile'
 export default {
+  components: {
+    UserProfile
+  },
   computed: {
     itemInfo(){
       return this.$store.state.item
