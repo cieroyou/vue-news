@@ -10,7 +10,9 @@
 6. Night Owl
 7. Live Server
 8. CodeMetrics
-9. ref : https://www.sitepoint.com/vs-code-extensions-javascript-developers/
+9. Import Cost
+10. Auto Import
+11. ref : https://www.sitepoint.com/vs-code-extensions-javascript-developers/
 
 
 ### 참조
@@ -29,3 +31,23 @@
 ### 라이프사이클 실무활용
 1. 데이터를 가져오는 라이프사이클 훅은 created()나 beforemounted() 에서 수행한다.
 2. created()는 컴포넌트가 생성되자마자 실행되는 함수다
+
+
+### import 하는 방법
+```javascript
+import Vue from 'vue';
+
+// #방법1
+//bus.js
+export const bus = new Vue();
+//App.js
+import { bus } from './bus.js';
+
+
+// #방법2
+//bus.js
+export default new Vue();
+//App.js
+import bus from './bus.js';
+
+```

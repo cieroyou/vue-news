@@ -49,16 +49,16 @@ export default {
         // # 1. using route path
         // console.log(this.$route.path === '/news')
         // # 2. using route name
-        const routeName = this.$route.name;
-        let actionName;
-        if (routeName === 'news'){
-            actionName = 'FETCH_NEWS';
-        }else if (routeName === 'ask'){
-            actionName = 'FETCH_ASK';
-        }else if (routeName === 'jobs'){
-            actionName = 'FETCH_JOBS';
-        }
-       this.$store.dispatch(actionName);
+    //     const routeName = this.$route.name;
+    //     let actionName;
+    //     if (routeName === 'news'){
+    //         actionName = 'FETCH_NEWS';
+    //     }else if (routeName === 'ask'){
+    //         actionName = 'FETCH_ASK';
+    //     }else if (routeName === 'jobs'){
+    //         actionName = 'FETCH_JOBS';
+    //     }
+    //    this.$store.dispatch(actionName);
     },
     computed: {
         // 페이지별로 create()에서 호출하는 api가 다르므로 각기 다른 결과(list)값을 가져옴
