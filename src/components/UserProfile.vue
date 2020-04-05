@@ -13,8 +13,9 @@
                 <!-- 부모에서 time 태그 정의 -->
                <!-- {{ info.created }} -->
             </slot>   
+            <slot name="karma"></slot>
           </div>
-          <slot name="karma"></slot>
+          
         </div>
       </div>
 </template>

@@ -3,22 +3,9 @@
     <section>
       <!-- 질문 상세 정보 -->
       <user-profile>
-        <div slot="username">{{ itemInfo.user }}</div>
-        <template slot="time">{{ itemInfo.time_ago }}</template>
+        <router-link slot="username" :to="`/user/${itemInfo.user}`">{{ itemInfo.user }}</router-link>
+        <template slot="time">Posted {{ itemInfo.time_ago }}</template>
       </user-profile>
-      <!-- <div class="user-container">
-        <div>
-          <i class="fas fa-user"></i>
-        </div>
-        <div class="user-description">
-          <router-link :to = "`/user/${itemInfo.user}`">
-            {{itemInfo.user}}
-          </router-link>
-          <div class="time">
-           {{ itemInfo.time_ago }}
-          </div>
-        </div>
-      </div> -->
       <h2>{{ itemInfo.title}}</h2>
     </section>
     <section>
